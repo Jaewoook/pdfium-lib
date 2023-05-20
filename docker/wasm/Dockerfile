@@ -37,7 +37,7 @@ WORKDIR /build
 RUN gclient config --unmanaged https://pdfium.googlesource.com/pdfium.git
 RUN gclient sync
 WORKDIR /build/pdfium
-RUN git checkout bad2c6c8f9549ac9bb0ec4e9e18e7cd2fc9f8d53
+RUN git checkout 4a5e28a78c2dda8033481a0b351953dceb8116fb
 
 RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN ln -s /usr/bin/pip3 /usr/bin/pip
@@ -60,8 +60,8 @@ RUN pip3 install setuptools docopt pygemstones
 RUN mkdir /emsdk
 WORKDIR /emsdk
 RUN git clone https://github.com/emscripten-core/emsdk.git .
-RUN ./emsdk install 3.1.32
-RUN ./emsdk activate 3.1.32
+RUN ./emsdk install 3.1.39
+RUN ./emsdk activate 3.1.39
 ENV PATH="${PATH}:/emsdk:/emsdk/upstream/emscripten"
 
 # cache system libraries
