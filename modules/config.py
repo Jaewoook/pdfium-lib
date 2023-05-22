@@ -1,5 +1,5 @@
 # general
-debug = True
+debug = False
 task = ""
 
 # pdfium
@@ -73,8 +73,8 @@ targets_android = [
 ]
 
 # wasm
-# configurations_wasm = ["release"]
-configurations_wasm = ["debug"]
+configurations_wasm = ["release"]
+# configurations_wasm = ["debug"]
 targets_wasm = [
     {"target_os": "wasm32", "target_cpu": "wasm", "pdfium_os": "wasm"},
 ]
